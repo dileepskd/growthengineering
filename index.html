@@ -5,94 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>the growth engineering company</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
   body {
     background: #ffffff;
     color: #1a1a1a;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 18px;
-    line-height: 1.75;
+    font-size: clamp(13px, 1.15vw, 15.5px);
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   main {
-    max-width: 620px;
+    max-width: 1040px;
     margin: 0 auto;
-    padding: 96px 24px 120px;
+    padding: clamp(20px, 4vh, 44px) clamp(20px, 4vw, 40px);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content {
+    columns: 2;
+    column-gap: 48px;
   }
   h1 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 48px;
+    column-span: all;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.12;
     letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    text-wrap: balance;
   }
-  p { margin-bottom: 28px; }
-  strong { font-weight: 700; }
   h2 {
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 700;
-    margin: 56px 0 12px;
+    margin: 15px 0 4px;
+    break-after: avoid;
+    -webkit-column-break-after: avoid;
   }
+  p {
+    margin-bottom: 9px;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+  .content > p:first-of-type { margin-top: 0; }
+  strong { font-weight: 700; }
   a {
     color: #1a1a1a;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
   }
   a:hover { color: #555; }
   a:focus-visible {
     outline: 2px solid #1a1a1a;
     outline-offset: 3px;
   }
-  .sign {
-    margin-top: 72px;
+  .featured {
+    margin-top: 16px;
+    break-inside: avoid;
   }
-  .sign p { margin-bottom: 4px; }
+  .featured .label {
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 0.72em;
+    color: #555;
+    margin-right: 8px;
+  }
   .cta {
-    margin-top: 48px;
+    margin-top: 14px;
     font-weight: 700;
+    break-inside: avoid;
   }
-  @media (max-width: 480px) {
-    body { font-size: 17px; }
-    main { padding: 64px 20px 96px; }
+  .cta a + a { margin-left: 4px; }
+  .dot { color: #b0b0b0; margin: 0 6px; }
+  .sign {
+    margin-top: 20px;
+    color: #555;
+    break-inside: avoid;
+  }
+  .sign p { margin-bottom: 2px; }
+
+  @media (max-width: 720px) {
+    body { font-size: 15px; line-height: 1.4; }
+    main {
+      justify-content: flex-start;
+      padding: 28px 22px 40px;
+    }
+    .content { columns: 1; }
+    h1 { font-size: 23px; margin-bottom: 14px; }
+    h2 { margin: 18px 0 4px; }
+    p { margin-bottom: 11px; }
   }
 </style>
 </head>
 <body>
 <main>
-  <h1>the growth engineering company</h1>
+  <div class="content">
+    <h1>the growth engineering company</h1>
 
-  <p>in 2026, building has become easy. growing a product is still a steep mountain to climb.</p>
+    <p>in 2026, building has become easy. growing a product is still a steep mountain to climb.</p>
 
-  <p>marketing has always been put in a blackbox, made to seem incredibly difficult by agencies, influencers, and consultants.</p>
+    <p>marketing has always been put in a blackbox, made to seem incredibly difficult by agencies, influencers, and consultants.</p>
 
-  <p>some businesses figure it out. most don't. and the most beautiful products die, every day.</p>
+    <p>some businesses figure it out. most don't. and the most beautiful products die, every day.</p>
 
-  <p>for the last 10 years i have been helping businesses grow, and for the next 20 i will be doing the same. i'm obsessed with it.</p>
+    <p>for the last 10 years i have been helping businesses grow, and for the next 20 i will be doing the same. i'm obsessed with it.</p>
 
-  <p><strong>the growth engineering company is an attempt to fix this</strong></p>
+    <p><strong>the growth engineering company is an attempt to fix this</strong></p>
 
-  <h2>if you're a tech company</h2>
-  <p>we help you get that workflow you saw on twitter running on your own machine, and help you ship campaigns.</p>
+    <h2>if you're a tech company</h2>
+    <p>we help you get that workflow you saw on twitter running on your own machine, and help you ship campaigns.</p>
 
-  <h2>if you're a non-tech company</h2>
-  <p>we are your marketing team. AI first, results first, and deeply driven to get you more business, without you worrying about the hard work.</p>
+    <h2>if you're a non-tech company</h2>
+    <p>we are your marketing team. AI first, results first, and deeply driven to get you more business, without you worrying about the hard work.</p>
 
-  <h2>if you're an early-stage startup</h2>
-  <p>we fix your socials, get you launched, and get you your first set of customers.</p>
+    <h2>if you're an early-stage startup</h2>
+    <p>we fix your socials, get you launched, and get you your first set of customers.</p>
 
-  <h2>here's what i've done so far</h2>
+    <h2>here's what i've done so far</h2>
 
-  <p><strong>supatest</strong> (founder): 2.5 million impressions, 450 meetings in a year, $500k in deals.</p>
+    <p><strong>supatest</strong> (founder): 2.5 million impressions, 450 meetings in a year, $500k in deals.</p>
 
-  <p><strong>volopay</strong>: built and ran a 50+ person outbound team, 400 meetings a year, grew it to $5 million USD.</p>
+    <p><strong>volopay</strong>: built and ran a 50+ person outbound team, 400 meetings a year, grew it to $5 million USD.</p>
 
-  <p><strong>strarts</strong> (founder): ₹5 crores in revenue generated in one year.</p>
+    <p><strong>strarts</strong> (founder): ₹5 crores in revenue generated in one year.</p>
 
-  <p><strong>freshworks</strong>: grew the middle east market from zero to $10 million USD.</p>
+    <p><strong>freshworks</strong>: grew the middle east market from zero to $10 million USD.</p>
 
-  <p class="cta"><a href="mailto:dileep@growthengineeringcompany.com">talk to us</a></p>
+    <p class="featured"><span class="label">featured in</span><a href="https://www.cooby.co/en/post/volopay-revenue-growth" target="_blank" rel="noopener noreferrer">volopay's revenue growth</a><span class="dot">·</span><a href="https://www.zawya.com/en/press-release/freshworks-announces-expansion-into-the-middle-east-market-h04wb7fu" target="_blank" rel="noopener noreferrer">freshworks in the middle east</a></p>
 
-  <div class="sign">
-    <p>with an obsession to help businesses grow,</p>
-    <p>yours,</p>
-    <p>dileep.</p>
+    <p class="cta"><a href="mailto:dileep@growthengineeringcompany.com">talk to us</a><span class="dot">·</span><a href="https://www.linkedin.com/in/dileep-krishna/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
+
+    <div class="sign">
+      <p>with an obsession to help businesses grow,</p>
+      <p>yours,</p>
+      <p>dileep.</p>
+    </div>
   </div>
 </main>
 </body>
